@@ -1,0 +1,212 @@
+/* =========================
+   1. RESET
+========================= */
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+/* =========================
+   2. ROOT VARIABLES
+========================= */
+
+:root {
+  /* COLORS */
+  --color-primary: 252, 198, 12;
+  --color-secondary: 250, 231, 178; /* #06b6d4 */
+  --color-bg: 249, 250, 251; /* #f9fafb */
+  --color-text: 20, 18, 12; /* #111827 */
+  --color-white: 255, 255, 255; /* #ffffff */
+
+  /* SPACING */
+  --space-xs: 4px;
+  --space-sm: 8px;
+  --space-md: 16px;
+  --space-lg: 24px;
+  --space-xl: 32px;
+
+  /* FONT */
+  --font-base: 16px;
+  --font-heading: 120px;
+  --font-subheading: 18px;
+  --font-text: 18px;
+
+  /* BORDER RADIUS */
+  --radius-sm: 6px;
+  --radius-md: 12px;
+  --radius-lg: 20px;
+
+  /* SHADOW */
+  --shadow-sm: 0 2px 6px rgba(0, 0, 0, 0.1);
+  --shadow-md: 0 6px 16px rgba(0, 0, 0, 0.15);
+
+  /* TRANSITION */
+  --transition: all 0.3s ease;
+}
+
+/* =========================
+   3. BASE STYLES
+========================= */
+
+html,
+body {
+  height: 100%;
+}
+body {
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+  font-size: var(--font-base);
+  background-color: rgb(var(--color-bg));
+
+  color: var(--color-text);
+  line-height: 1.5;
+  display: flex;
+  flex-direction: column;
+}
+header,
+main,
+footer {
+  padding: var(--space-lg);
+}
+footer {
+  padding-top: var(--space-xs) !important;
+  padding-bottom: var(--space-xs) !important;
+}
+header {
+  padding-top: var(--space-sm) !important;
+  padding-bottom: var(--space-sm) !important;
+}
+
+main {
+  flex: 1;
+  width: 100%;
+}
+
+img {
+  max-width: 100%;
+  display: block;
+}
+
+button {
+  border: none;
+  cursor: pointer;
+  font: inherit;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+/* =========================
+   4. LAYOUT
+========================= */
+
+.container {
+  width: 100%;
+  margin: auto;
+  padding: var(--space-lg);
+}
+
+.container-fluid {
+  width: 100%;
+  padding: var(--space-lg);
+}
+
+/* =========================
+   5. Website Specific Styles
+========================= */
+body{
+   background: linear-gradient(
+      to right,
+      rgba(var(--color-primary), 1) 65%,
+      rgba(var(--color-secondary), 1) 35%
+    );
+}
+header .logo {
+  width: 120px;
+}
+header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.menu {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+.menu__bar {
+  width: 25px;
+  height: 3px;
+  background-color: rgb(var(--color-text));
+  border-radius: var(--radius-sm);
+}
+
+.hero{
+  height: 100%;
+  position: relative;
+  
+}
+.hero__dots{
+display: flex;
+position: absolute;
+flex-direction: column;
+right: 0;
+top: 50%;
+gap: var(--space-xs);
+}
+.hero__dots--circle{
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  background-color: rgb(var(--color-white));
+}
+.hero__content{
+display: flex;
+  align-items: center;
+  gap: 100px;
+  justify-content: space-between;
+}
+.hero__content__left{
+  text-align: left;
+}
+.hero__content__left--sub-heading{
+  letter-spacing: var(--space-sm);
+  font-size: var(--font-subheading);
+}
+
+.hero__content__left--heading{
+  font-size: var(--font-heading);
+}
+
+.hero__content__left--text{
+  font-size: var(--font-text);
+  max-width: 350px;
+}
+
+.hero__content__left--date{
+  font-size: var(--font-subheading);
+  letter-spacing: var(--space-sm);
+  font-weight: bold;
+  margin-top: var(--space-md);
+}
+footer{
+  text-align: center;
+  font-size: 12px;
+}
+
+@media screen and (max-width:767px) {
+  .hero__content{
+    flex-direction: column;
+  }
+  .hero__dots{
+    bottom: 0;
+        flex-direction: row;
+        right: 47%;
+        top: unset;
+  }
+}
