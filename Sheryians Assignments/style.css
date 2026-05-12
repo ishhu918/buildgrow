@@ -1,0 +1,155 @@
+/* =========================
+   1. RESET
+========================= */
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+/* =========================
+   2. ROOT VARIABLES
+========================= */
+
+:root {
+  /* COLORS */
+  --color-primary: 79, 70, 229;     /* #4f46e5 */
+  --color-secondary: 6, 182, 212;   /* #06b6d4 */
+  --color-bg: 249, 250, 251;        /* #f9fafb */
+  --color-text: 17, 24, 39;         /* #111827 */
+  --color-white: 255, 255, 255;     /* #ffffff */
+
+  /* SPACING */
+  --space-xs: 4px;
+  --space-sm: 8px;
+  --space-md: 16px;
+  --space-lg: 24px;
+  --space-xl: 32px;
+
+  /* FONT */
+  --font-base: 16px;
+  --font-heading: 24px;
+
+  /* BORDER RADIUS */
+  --radius-sm: 6px;
+  --radius-md: 12px;
+  --radius-lg: 20px;
+
+  /* SHADOW */
+  --shadow-sm: 0 2px 6px rgba(0,0,0,0.1);
+  --shadow-md: 0 6px 16px rgba(0,0,0,0.15);
+
+  /* TRANSITION */
+  --transition: all 0.3s ease;
+}
+
+/* =========================
+   3. BASE STYLES
+========================= */
+
+html, body{
+    height: 100%;
+
+}
+body {
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+  font-size: var(--font-base);
+  background-color: rgb(var(--color-bg));
+  color: var(--color-text);
+  line-height: 1.5;
+  display: flex;
+  flex-direction: column;
+}
+header, main, footer{
+    padding: var(--space-lg);
+}
+footer{
+    padding-top: var(--space-xs) !important;
+    padding-bottom: var(--space-xs) !important;
+}
+header{
+    padding-top: var(--space-sm) !important;
+    padding-bottom: var(--space-sm) !important;
+}
+
+
+main {
+  flex: 1;
+  width: 100%;
+}
+
+img {
+  max-width: 100%;
+  display: block;
+}
+
+button {
+  border: none;
+  cursor: pointer;
+  font: inherit;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+/* =========================
+   4. LAYOUT
+========================= */
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: var(--space-lg);
+}
+
+.container-fluid {
+  width: 100%;
+  padding: var(--space-lg);
+}
+
+header{
+    background-color: rgba(var(--color-primary), 0.6);
+    color: var(--color-white);
+    padding: var(--space-lg);
+    text-align: center;
+}
+
+footer {
+    background-color: rgba(var(--color-secondary), 0.6);
+    color: rgb(var(--color-text));
+  text-align: center;
+
+}
+
+/* =========================
+   5. Website Specific Styles
+========================= */
+
+main h2{
+    text-align: center;
+}
+
+.folders{
+    display: flex;
+    justify-content: center;
+    gap: var(--space-lg);
+    flex-wrap: wrap;
+}
+.folder{
+    width: 200px;
+    height: 150px;
+    background-color: rgba(var(--color-secondary), 0.6);
+    border-radius: var(--radius-md);
+    margin: var(--space-lg) auto;
+    position: relative;
+    box-shadow: var(--shadow-md);
+    transition: var(--transition);
+    display: flex;
+    flex-direction: column;
+    padding: var(--space-md);
+}
