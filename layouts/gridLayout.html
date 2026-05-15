@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Grid Layout</title>
+    <style>
+        *{
+            padding: 0;
+            margin: 0;
+            box-sizing: border-box;
+        }
+        html, body{
+            height: 100%;
+            width: 100%;
+        }
+        header{
+            height: 50px;
+            background-color: lightcoral;
+        }
+        footer{
+            height: 30px;
+            background-color: lightpink;
+        }
+        main{
+            height: calc(100% - 50px - 30px);
+        }
+        .grid{
+            display: grid;
+            gap:16px;
+            /* fr is responsive  */
+            grid-template-columns: repeat(3,fr);
+            grid-template-rows:repeat(3,fr);
+            grid-template-areas: 
+            "r1c1 r1c2 r1c3"
+            "r2c1 r2c2 r2c3"
+            "r3c1 r3c2 r3c3";
+            height: 100%;
+            padding: 16px;
+        }
+        .grid__item{
+            transition: all 0.3s;
+            box-shadow: 0 0 2px rgba(0,00,0,0.2);
+            padding: 5px;
+        }
+        .grid__item:hover{
+            box-shadow: 0 0 12px rgba(0,00,0,0.2);
+            cursor:pointer;
+        }
+        .r1c1{grid-area:r1c1; background-color: lightblue;}
+        .r1c2{grid-area:r1c2; background-color: lightcoral;}
+        .r1c3{grid-area:r1c3; background-color: lightgray;}
+        .r2c1{grid-area:r2c1; background-color: lightgreen;}
+        .r2c2{grid-area:r2c2; background-color: lightpink; }
+        .r2c3{grid-area:r2c3; background-color: lightseagreen; }
+        .r3c1{grid-area:r3c1; background-color: lightyellow;}
+        .r3c2{grid-area:r3c2; background-color: lightslategrey;}
+        .r3c3{grid-area:r3c3; background-color: lightskyblue;}
+    </style>
+</head>
+<body>
+    <header>header</header>
+    <main>
+        <!-- 3 rows * 3 cols -->
+         <section class="grid">
+            <div class="grid__item r1c1">r1c1</div>
+            <div class="grid__item r1c2">r1c2</div>
+            <div class="grid__item r1c3">r1c3</div>
+            <div class="grid__item r2c1">r2c1</div>
+            <div class="grid__item r2c2">r2c2</div>
+            <div class="grid__item r2c3">r2c3</div>
+            <div class="grid__item r3c1">r3c1</div>
+            <div class="grid__item r3c2">r3c2</div>
+            <div class="grid__item r3c3">r3c3</div>
+         </section>
+    </main>
+    <footer>footer</footer>
+</body>
+</html>
