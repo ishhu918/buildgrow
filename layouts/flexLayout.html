@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>responsive flex</title>
+    <style>
+        *{
+            padding: 0;
+            margin: 0;
+            box-sizing: border-box;
+        }
+        html, body{
+            width: 100%;
+            height: 100%;
+        }
+        main{
+            padding: 20px;
+        }
+        .flex{
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            gap: 20px;
+            flex-wrap: wrap;
+        }
+        .flex-item{
+            border: 1px solid red;
+            flex: 1 1 calc(33.33% - 20px);
+        }
+        @media screen and (max-width:767px) {
+            .flex-item{
+                flex: 1 1 calc(50% - 20px);
+            }
+        }
+        @media screen and (max-width:360px) {
+            .flex-item{
+                flex: 1 1 calc(100% - 20px);
+            }
+        }
+
+
+    </style>
+
+</head>
+<body>
+<main>
+    <div class="flex">
+        <div class="flex-item">1</div>
+        <div class="flex-item">2</div>
+        <div class="flex-item">3</div>
+    </div>
+</main>
+
+</body>
+</html>
+
