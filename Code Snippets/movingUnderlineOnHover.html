@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Moving Underline On Hover</title>
+    <style>
+        *{
+            padding: 0;margin: 0;box-sizing: border-box;
+        }
+        html, body{width: 100%;height: 100%;}
+        a{
+            text-decoration: none;
+            text-transform: capitalize;
+        }
+        ul{
+                        display: flex;
+            gap: 40px;
+        }
+        li{
+            position: relative;
+            list-style: none;
+
+        }
+        li::after{
+            content: "";
+            width: 0;
+            height: 2px;
+            background-color: red;
+            position: absolute;
+            left: 0;
+            bottom: -3px;
+            transition: all 0.3s ease;
+        }
+        li:hover::after{
+            width: 100%;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <nav>
+            <ul>
+                <li>
+                    <a href="/">home</a>
+                </li>
+                <li>
+                    <a href="/">about</a>
+                </li>
+                <li>
+                   
+                    <a href="/">services</a>
+                    
+                </li>
+                <li>
+                   
+                    <a href="/">pages</a>
+                    
+                </li>
+                <li>
+                   
+                                       <a href="/">contact</a>
+
+                    
+                </li>
+            </ul>
+        </nav>
+    </header>
+</body>
+</html>
