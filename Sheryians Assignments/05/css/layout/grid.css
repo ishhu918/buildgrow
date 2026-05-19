@@ -1,0 +1,29 @@
+/* =========================
+   🔲 GRID
+   ========================= */
+
+.ishh-grid {
+  display: grid;
+  gap: var(--space-md);
+}
+
+.ishh-grid-2 {
+  grid-template-columns: repeat(2, 1fr);
+}
+
+.ishh-grid-3 {
+  grid-template-columns: repeat(3, 1fr);
+}
+
+.ishh-grid-4 {
+  grid-template-columns: repeat(4, 1fr);
+}
+
+
+@media (max-width: 768px) {
+  .ishh-grid-2,
+  .ishh-grid-3,
+  .ishh-grid-4 {
+    grid-template-columns: 1fr;
+  }
+}

@@ -1,0 +1,47 @@
+/* =========================
+   🔥 FLEX
+   ========================= */
+
+.ishh-flex {
+  display: flex;
+}
+
+.ishh-flex-row {
+  flex-direction: row;
+}
+
+.ishh-flex-col {
+  flex-direction: column;
+}
+
+/* justify */
+.ishh-justify-start { justify-content: flex-start; }
+.ishh-justify-center { justify-content: center; }
+.ishh-justify-between { justify-content: space-between; }
+
+/* align */
+.ishh-items-start { align-items: flex-start; }
+.ishh-items-center { align-items: center; }
+.ishh-items-end { align-items: flex-end; }
+
+.ishh-flex-wrap {
+  flex-wrap: wrap;
+}
+
+.ishh-gap-sm {
+  gap: var(--space-sm);
+}
+
+.ishh-gap-md {
+  gap: var(--space-md);
+}
+
+.ishh-gap-lg {
+  gap: var(--space-lg);
+}
+.ishh-gap-xl {
+  gap: var(--space-xl);
+}
+.ishh-gap-2xl {
+  gap: var(--space-2xl);
+}

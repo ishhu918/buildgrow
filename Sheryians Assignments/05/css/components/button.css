@@ -1,0 +1,69 @@
+/* =========================
+   🔘 BUTTON BASE
+   ========================= */
+
+.ishh-btn {
+  display: inline-block;
+  font-family: inherit;
+  font-size: var(--font-size-md);
+  font-weight: var(--font-weight-medium);
+  padding: var(--space-sm) var(--space-md);
+  border-radius: 6px;
+  border: none;
+  cursor: pointer;
+  text-align: center;
+  text-decoration: none;
+  transition: all 0.2s ease;
+}
+
+/* =========================
+   🎨 VARIANTS
+   ========================= */
+
+/* Primary */
+.ishh-btn--primary {
+  background-color: rgb(var(--primary-color));
+  color: rgb(255, 255, 255);
+}
+
+.ishh-btn--primary:hover {
+  opacity: 0.9;
+}
+
+/* Secondary */
+.ishh-btn--secondary {
+  background-color: rgb(var(--secondary-color));
+  color: rgb(255, 255, 255);
+}
+
+/* Outline */
+.ishh-btn--outline {
+  background-color: transparent;
+  border: 1px solid rgb(var(--primary-color));
+  color: rgb(var(--primary-color));
+}
+
+
+/* =========================
+   📏 SIZES
+   ========================= */
+
+.ishh-btn--sm {
+  padding: 4px 10px;
+  font-size: var(--font-size-sm);
+}
+
+.ishh-btn--lg {
+  padding: 12px 20px;
+  font-size: var(--font-size-lg);
+}
+
+
+/* =========================
+   ⚙️ STATES
+   ========================= */
+
+.ishh-btn:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+}

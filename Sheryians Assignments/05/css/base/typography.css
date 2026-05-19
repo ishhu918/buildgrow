@@ -1,0 +1,140 @@
+/* =========================
+   🔤 BASE TYPOGRAPHY
+   ========================= */
+
+body {
+  font-family: var(--font-family-base);
+  font-size: var(--font-size-md);
+  line-height: var(--line-height-base);
+  color: rgb(var(--text-color));
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+/* =========================
+   🧠 HEADINGS
+   ========================= */
+
+h1, .ishh-h1 {
+  font-size: var(--font-size-3xl);
+  font-weight: var(--font-weight-bold);
+  line-height: var(--line-height-heading);
+  margin-bottom: var(--space-md);
+}
+
+h2, .ishh-h2 {
+  font-size: var(--font-size-2xl);
+  font-weight: var(--font-weight-bold);
+  line-height: var(--line-height-heading);
+  margin-bottom: var(--space-sm);
+}
+
+h3, .ishh-h3 {
+  font-size: var(--font-size-xl);
+  font-weight: var(--font-weight-medium);
+  margin-bottom: var(--space-sm);
+}
+
+h4, .ishh-h4 {
+  font-size: var(--font-size-lg);
+  font-weight: var(--font-weight-medium);
+}
+
+h5, .ishh-h5 {
+  font-size: var(--font-size-md);
+}
+
+h6, .ishh-h6 {
+  font-size: var(--font-size-sm);
+}
+
+/* =========================
+   📄 TEXT
+   ========================= */
+
+p {
+  margin-bottom: var(--space-md);
+  font-size: var(--font-size-md);
+}
+
+small, .ishh-text-xs {
+  font-size: var(--font-size-xs);
+}
+
+.ishh-text-sm {
+  font-size: var(--font-size-sm);
+}
+
+.ishh-text-lg {
+  font-size: var(--font-size-lg);
+}
+
+.ishh-text-xl {
+  font-size: var(--font-size-xl);
+}
+
+/* =========================
+   🎨 TEXT COLORS
+   ========================= */
+
+.ishh-text-primary {
+  color: rgb(var(--primary-color));
+}
+
+.ishh-text-secondary {
+  color: rgb(var(--secondary-color));
+}
+
+.ishh-text-muted {
+  color: rgba(var(--text-color), 0.6);
+}
+
+/* =========================
+   ⚙️ FONT WEIGHT
+   ========================= */
+
+.ishh-text-regular {
+  font-weight: var(--font-weight-regular);
+}
+
+.ishh-text-medium {
+  font-weight: var(--font-weight-medium);
+}
+
+.ishh-text-bold {
+  font-weight: var(--font-weight-bold);
+}
+
+/* =========================
+   📐 TEXT ALIGNMENT
+   ========================= */
+
+.ishh-text-left {
+  text-align: left;
+}
+
+.ishh-text-center {
+  text-align: center;
+}
+
+.ishh-text-right {
+  text-align: right;
+}
+
+/* =========================
+   📱 RESPONSIVE
+   ========================= */
+
+@media (min-width: 768px) {
+  h1, .ishh-h1 {
+    font-size: 48px;
+  }
+
+  h2, .ishh-h2 {
+    font-size: 36px;
+  }
+
+  h3, .ishh-h3 {
+    font-size: 28px;
+  }
+}

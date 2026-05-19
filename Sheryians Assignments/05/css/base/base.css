@@ -1,0 +1,27 @@
+html {
+  font-size: 62.5%; /* 10px */
+}
+body {
+  font-family: var(--font-family-base);
+  font-size: var(--font-size-md);
+  background: rgb(var(--bg-body));
+  color: rgb(var(--text-color));
+}
+
+.ishh-container-fluid{
+  max-width: var(--container-fluid);
+}
+.ishh-container{
+  max-width: var(--container);
+  margin:auto;
+}
+
+.ishh-section {
+  padding: var(--section-padding) 0;
+}
+
+.ishh-card {
+  padding: var(--space-md);
+  border-radius: var(--radius-md);
+  box-shadow: var(--shadow-md);
+}
