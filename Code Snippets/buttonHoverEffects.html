@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Button Hover Effects</title>
+    <style>
+        *{
+            padding: 0;margin: 0;box-sizing: border-box;
+        }
+        html, body{
+            height: 100%;width: 100%;
+        }
+        a{
+            text-decoration: none;
+        }
+        main{
+            padding: 2rem;
+            display: flex;
+            justify-content: space-around;
+            background-color: rgb(245, 245, 245);
+        }
+         /* simple bgc from left  */
+        .hover-bg{
+            border: 2px solid rgb(15, 183, 229);;
+            padding: 10px;
+            border-radius: 12px;
+            position: relative;
+            overflow: hidden;
+            transition: all .3s ease;
+            color: rgb(15, 183, 229);
+            z-index: 1;
+        }
+        .hover-bg::after{
+            content: "";
+            background-color: rgb(15, 183, 229);
+            width: 0;
+            height: 100%;
+            position: absolute;
+            left: 0;
+            top: 0;
+            z-index: -1;
+            transition: all .3s ease;
+        }
+        .hover-bg:hover::after{
+            width: 100%;
+            
+        }
+        .hover-bg:hover{
+            color: white;
+            border-color: white;
+        }
+
+        /* circle from center  */
+        .center-circle{
+            position: relative;
+            border: 2px solid  rgb(15, 183, 229);;
+            text-align: center;
+            padding: 10px;
+            border-radius: 8px;
+            overflow: hidden;
+            transition: all .3s ease;
+            color: rgb(15, 183, 229);
+            z-index: 1;
+        }
+        .center-circle::after{
+            content: "";
+            position: absolute;
+            background-color: rgb(15, 183, 229);;
+            border-radius: 50%;
+            width: 20px;
+            height: 20px;
+            left: 50%;
+            top: 50%;
+            transform: translate(-50%, -50%) scale(0);
+            z-index: -1;
+            transition: all .3s ease;
+        }
+        .center-circle:hover::after{
+             transform: translate(-50%, -50%) scale(7);
+        }
+        .center-circle:hover{
+            color:white;
+        }
+    </style>
+</head>
+<body>
+    <main>
+        <!-- simple bgc from left-->
+         <a href="/" class="hover-bg">Simple BG color</a>
+         <!-- bgc circle from center -->
+          <a href="/" class="center-circle">circle from center</a>
+
+    </main>
+</body>
+</html>
